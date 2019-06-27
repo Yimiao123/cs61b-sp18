@@ -6,7 +6,7 @@ public class Planet{
 	public double yyVel;
 	public double mass;
 	public String imgFileName;
-	public static final double G = 6.67e-11;
+	private static final double G = 6.67e-11;
 
 	//constructors
 	// xP(double): current x position of planet p.
