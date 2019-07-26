@@ -7,7 +7,7 @@ public class ArrayDeque<T> {
     /*
     create an empty list.
      */
-    public ArrayDeque(){
+    public ArrayDeque()    {
         items = (T[]) new Object[8];
         size = 0;
         nextFirst = 0;
@@ -20,19 +20,19 @@ public class ArrayDeque<T> {
     public void resize(int capacity){
         T[] newArray = (T[]) new Object[capacity];
         if (nextLast > nextFirst){
-            System.arraycopy(items,nextFirst+1,newArray,0,nextLast - nextFirst -1);
+            System.arraycopy(items, nextFirst+1, newArray, 0, nextLast - nextFirst -1);
         }
-        else if( nextFirst == nextLast){
-            System.arraycopy(items,0,newArray,0,nextLast);//?
-        }else{
-            System.arraycopy(items,nextFirst+1,newArray,0,items.length-nextFirst-1);
-            System.arraycopy(items,0,newArray,items.length-nextFirst-1,nextLast);
+        else if( nextFirst == nextLast)
+        {
+            System.arraycopy(items, 0, newArray, 0, nextLast);//?
+        }else
+            {
+            System.arraycopy(items, nextFirst+1, newArray,0, items.length-nextFirst-1);
+            System.arraycopy(items, 0, newArray, items.length-nextFirst-1, nextLast);
         }
-        nextFirst = capacity -1;
+        nextFirst = capacity - 1;
         nextLast = size;
         items = newArray;
-
-
     }
     /*
     Gets the ith item in the list
@@ -86,7 +86,7 @@ public class ArrayDeque<T> {
 
     }
 
-    public T removeFrist(){
+    public T removeFirst(){
         if(isEmpty())
             return null;
         nextFirst = plusOne((nextFirst));

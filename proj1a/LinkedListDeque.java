@@ -108,15 +108,16 @@ public class LinkedListDeque<T> {
     If no such item exists, returns null.
      */
     public T get(int index){
-        if(index <0 || index > size - 1){
+        StuffNode currentNode = sentinel.next;
+        if(index < 0 || index > size - 1){
             return null;
         }
-        StuffNode currentNode = sentinel.next;
-        while( index >= 0){
-            currentNode = currentNode.next;
-            index --;
-
+        else{
+            for(int i = 0;i < index; i++){
+                currentNode = currentNode.next;
+            }
         }
+
         return currentNode.item;
     }
 
