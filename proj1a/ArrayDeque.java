@@ -41,10 +41,10 @@ public class ArrayDeque<T> {
     Gets the ith item in the list
      */
     public T get(int i){
-        if (i < 0 || i >= size){
-            return null;
+        if (i > nextFirst || i < nextLast){
+            return items[i];
         }
-        return items[i];
+        return null;
     }
     /*
     return the number of items in the list
@@ -60,8 +60,9 @@ public class ArrayDeque<T> {
             resize(2 * size);
         }
         items[nextFirst] = item;
-        size++;
         nextFirst = minusOne(nextFirst);
+        size++;
+
     }
 
     private int minusOne(int i){
@@ -76,8 +77,8 @@ public class ArrayDeque<T> {
             resize( 2 * size);
         }
         items[nextLast] = item;
-        size++;
         nextLast = plusOne(nextLast);
+        size++;
     }
 
     private int plusOne(int index){
@@ -92,14 +93,13 @@ public class ArrayDeque<T> {
         if(isEmpty()) {
             return null;
         }
+        if(items.length >= 16 && (float)size / items.length < 0.25){
+            resize(items.length/2);
+        }
         nextFirst = plusOne((nextFirst));
         T removed = items[nextFirst];
         items[nextFirst] = null;
-
         size --;
-        if(items.length > 16 && (float)size / items.length < 0.25){
-            resize(items.length/2);
-        }
         return removed;
 
     }
@@ -107,25 +107,29 @@ public class ArrayDeque<T> {
         if(isEmpty()){
             return null;
         }
+        if(items.length >= 16 && (float)size/items.length < 0.25){
+            resize(items.length / 2);
+        }
         nextLast = minusOne(nextLast);
         T removed = items[nextLast];
         items[nextLast] = null;
         size --;
-        if(items.length > 16 && (float)size/items.length < 0.25){
-            resize(items.length/2);
-        }
         return removed;
     }
 
     public boolean isEmpty(){
         return size == 0;
     }
+    /*
+    Prints the items in the deque from first to last, separated by a space.
+     */
     public void printDeque(){
+        int index = 0;
         int i = plusOne(nextFirst);
-        while(i != nextLast){
+        while(index < size){
             System.out.print(items[i] + " ");
             i = plusOne(i);
+            i++;
         }
-        System.out.println();
     }
 }
