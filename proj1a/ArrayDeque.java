@@ -113,7 +113,7 @@ public class ArrayDeque<T> {
         if (items.length >= 16 && (float) size / items.length < 0.25) {
             resize(items.length / 2);
         }
-        //nextLast = minusOne(nextLast);
+        nextLast = minusOne(nextLast);
         T removed = items[nextLast];
         items[nextLast] = null;
         size--;
