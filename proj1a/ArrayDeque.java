@@ -40,6 +40,9 @@ public class ArrayDeque<T> {
 
     /** Gets the ith item in the list.*/
     public T get(int i) {
+        if (i > size - 1){
+            return null;
+        }
         if (nextFirst <= nextLast) {
             return items[nextFirst + 1 + i];
         } else {
