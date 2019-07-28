@@ -42,7 +42,7 @@ public class ArrayDeque<T> {
     public T get(int i) {
         if (i >= items.length) {
             return null;
-        }else if (nextFirst <= nextLast) {
+        } else if (nextFirst <= nextLast) {
             return items[nextFirst + 1 + i];
         } else {
             if (nextFirst + 1 + i < items.length) {
