@@ -1,6 +1,4 @@
-
-
-public class LinkedListDeque<T> {
+public class LinkedListDeque<T> implements Deque<T> {
 
     private class StuffNode {
 
@@ -27,6 +25,7 @@ public class LinkedListDeque<T> {
         size = 0;
     }
     /** Adds an item of type T to the front of the deque.*/
+    @Override
     public void addFirst(T item) {
         StuffNode first = new StuffNode(item, sentinel, sentinel.next);
         sentinel.next = first;
@@ -34,7 +33,7 @@ public class LinkedListDeque<T> {
         size++;
     }
     /** Adds an item of type T to the back of the deque. */
-
+    @Override
     public void addLast(T item) {
         StuffNode last = new StuffNode(item, sentinel.prev, sentinel);
         sentinel.prev = last;
@@ -43,6 +42,7 @@ public class LinkedListDeque<T> {
 
     }
     /** return true if deque is empty, false otherwise.*/
+    @Override
     public boolean isEmpty() {
         if (size == 0) {
             return true;
@@ -50,6 +50,7 @@ public class LinkedListDeque<T> {
         return false;
     }
     /** returns the number of items in the deque.*/
+    @Override
     public int size() {
         return size;
     }
@@ -58,6 +59,7 @@ public class LinkedListDeque<T> {
     print the items in the deque from first to last,
     separated by a space. Once all the items have been printed, print out a new line.
      */
+    @Override
     public void printDeque() {
         StuffNode p = sentinel.next;
         while (p != sentinel) {
@@ -71,7 +73,7 @@ public class LinkedListDeque<T> {
     Removes and returns the item at the front of the deque.
     If no such item exists, returns null.
      */
-
+    @Override
     public T removeFirst() {
         if (isEmpty()) {
             return null;
@@ -87,6 +89,7 @@ public class LinkedListDeque<T> {
     Removes and returns the item at the back of the deque.
     If no such item exists, returns null.
      */
+    @Override
     public T removeLast() {
         if (isEmpty()) {
             return null;
@@ -99,6 +102,7 @@ public class LinkedListDeque<T> {
         return last.item;
     }
     /**Gets the item at the given index. If no such item exists, returns null.*/
+    @Override
     public T get(int index) {
         StuffNode currentNode = sentinel.next;
         if (index < 0 || index > size - 1) {
