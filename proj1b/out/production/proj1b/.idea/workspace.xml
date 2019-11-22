@@ -4,14 +4,7 @@
     <list default="true" id="de757128-f884-4fdc-b28b-3f22cecec284" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../lab3/Arithmetic/ArithmeticTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/Arithmetic/ArithmeticTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../library-sp18" beforeDir="false" afterPath="$PROJECT_DIR$/../library-sp18" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayDeque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deque.java" beforeDir="false" afterPath="$PROJECT_DIR$/Deque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedListDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/LinkedListDeque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OffByN.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OffByOne.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/Palindrome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PalindromeFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/PalindromeFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestOffByOne.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TestPalindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestPalindrome.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,6 +31,9 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.other" />
   </component>
   <component name="RunDashboard">
@@ -52,9 +48,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestPalindrome.testWordToDeque">
+  <component name="RunManager" selected="JUnit.TestPalindrome">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PalindromeFinder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PalindromeFinder" />
+      <module name="proj1b" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -65,22 +69,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPalindrome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestOffByN" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proj1b" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestPalindrome" />
+      <option name="MAIN_CLASS_NAME" value="TestOffByN" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPalindrome.testWordToDeque" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestOffByOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proj1b" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestOffByOne" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOffByOne.testEqualchars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proj1b" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestOffByOne" />
+      <option name="METHOD_NAME" value="testEqualchars" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPalindrome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proj1b" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestPalindrome" />
-      <option name="METHOD_NAME" value="testWordToDeque" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,8 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPalindrome.testWordToDeque" />
         <item itemvalue="JUnit.TestPalindrome" />
+        <item itemvalue="Application.PalindromeFinder" />
+        <item itemvalue="JUnit.TestOffByN" />
+        <item itemvalue="JUnit.TestOffByOne" />
+        <item itemvalue="JUnit.TestOffByOne.testEqualchars" />
       </list>
     </recent_temporary>
   </component>

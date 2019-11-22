@@ -43,4 +43,24 @@ public class Palindrome {
         return isPalindromeHelper(d);
     }
 
+    /**  Task 4: Generalized Palindrome and OffByOne
+     *
+     *   Generalized Palindrome.
+     * */
+    public boolean isPalindrome(String word, CharacterComparator cc) {
+        Deque<Character> d = wordToDeque(word);
+        return isPalindromeHelper(d, cc);
+    }
+
+    private boolean isPalindromeHelper(Deque<Character> d, CharacterComparator cc) {
+        if (d.size() <= 1) {
+            return true;
+        }
+        if (!cc.equalChars(d.removeFirst(), d.removeLast())) {
+            return false;
+        }
+        return isPalindromeHelper(d, cc);
+    }
 }
+
+
