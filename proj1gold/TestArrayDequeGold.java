@@ -6,7 +6,7 @@ public class TestArrayDequeGold {
         StudentArrayDeque<Integer> sad = new StudentArrayDeque<Integer>();
         ArrayDequeSolution<Integer> ads = new ArrayDequeSolution<Integer>();
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 200; i++) {
             int flag = StdRandom.uniform(0, 4);
             Integer val = Integer.valueOf(StdRandom.uniform(100));
 
@@ -21,7 +21,7 @@ public class TestArrayDequeGold {
             } else if (flag == 2) {
                 if (!ads.isEmpty()) {
                     System.out.println("removeFirst()");
-                    assertEquals(ads.isEmpty(), sad.isEmpty());
+//                    assertEquals(ads.isEmpty(), sad.isEmpty());
                     Integer exp = ads.removeFirst();
                     Integer ac = sad.removeFirst();
                     assertEquals("removeFirst()", exp, ac);
@@ -29,7 +29,7 @@ public class TestArrayDequeGold {
             } else {
                 if (!ads.isEmpty()) {
                     System.out.println("removeLast()");
-                    assertEquals(ads.isEmpty(), sad.isEmpty());
+//                    assertEquals(ads.isEmpty(), sad.isEmpty());
                     Integer exp = ads.removeLast();
                     Integer act = sad.removeLast();
                     assertEquals("removeLast()", exp, act);
