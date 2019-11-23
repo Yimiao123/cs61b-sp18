@@ -3,45 +3,47 @@ import org.junit.Test;
 public class TestArrayDequeGold {
     @Test
     public void arrayDequeTest() {
-        StudentArrayDeque<Integer> sad = new StudentArrayDeque<Integer>();
-        ArrayDequeSolution<Integer> ads = new ArrayDequeSolution<Integer>();
+        StudentArrayDeque<Integer> s = new StudentArrayDeque<Integer>();
+        ArrayDequeSolution<Integer> a = new ArrayDequeSolution<Integer>();
 
-        for (int i = 0; i < 30; i += 1) {
-            int flag = StdRandom.uniform(4);
-            /** Java will freely convert from Integer to int, which is called unboxing
-             *  However, only reference types can be null
-             *  If you try to automatically convert a null integer to an int, you'll get a NullPointerException
-             */
-            Integer val = Integer.valueOf(StdRandom.uniform(100));
-            if (flag == 0) {
-                System.out.println("addFirst(" + val + ")");
-                ads.addFirst(val);
-                sad.addFirst(val);
-            } else {
-                if (flag == 1) {
-                    System.out.println("addLast(" + val + ")");
-                    ads.addLast(val);
-                    sad.addLast(val);
-                } else {
-                    if (flag == 2) {
-                        if (!ads.isEmpty()) {
-                            System.out.println("removeFirst()");
-                            assertEquals(ads.isEmpty(), sad.isEmpty());
-                            Integer exp = ads.removeFirst();
-                            Integer ac = sad.removeFirst();
-                            assertEquals("removeFirst()", exp, ac);
-                        }
-                    } else {
-                        if (!ads.isEmpty()) {
-                            System.out.println("removeLast()");
-                            assertEquals(ads.isEmpty(), sad.isEmpty());
-                            Integer exp = ads.removeLast();
-                            Integer act = sad.removeLast();
-                            assertEquals("removeLast()", exp, act);
-                        }
+        for (int i=0; i < 30; i++) {
+            int f = StdRandom.uniform(4);
+
+            switch (f) {
+                case 0:
+                    Integer addNum = StdRandom.uniform(10);
+                    a.addFirst(addNum);
+                    s.addFirst(addNum);
+                    break;
+
+                case 1:
+                    addNum = StdRandom.uniform(10);
+                    a.addLast(addNum);
+                    s.addLast(addNum);
+                    break;
+
+                case 2:
+                    if (! a.isEmpty()) {
+                        Integer tRamdom = a.removeFirst();
+                        Integer sRamdom = s.removeFirst();
+                        assertEquals(tRamdom, sRamdom);
                     }
-                }
+                    break;
+
+                case 3:
+                    if (! s.isEmpty()) {
+                        Integer tRamdom = a.removeLast();
+                        Integer sRamdom = s.removeLast();
+                        assertEquals(tRamdom, sRamdom);
+                    }
             }
+
         }
+        for (int i = 0; i < s.size(); i++)
+            assertEquals(s.get(i), a.get(i));
+
+
     }
+
+
 }
