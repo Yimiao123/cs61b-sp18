@@ -6,7 +6,7 @@ public class TestArrayDequeGold {
         StudentArrayDeque<Integer> sad = new StudentArrayDeque<Integer>();
         ArrayDequeSolution<Integer> ads = new ArrayDequeSolution<Integer>();
 
-        for (int i = 0; i < 100; i += 1) {
+        for (int i = 0; i < 30; i += 1) {
             int flag = StdRandom.uniform(4);
             /** Java will freely convert from Integer to int, which is called unboxing
              *  However, only reference types can be null
