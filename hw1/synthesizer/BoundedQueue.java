@@ -2,7 +2,7 @@ package synthesizer;
 
 import java.util.Iterator;
 // An interface is a formal contract between a class and the outside world
-// All methods defined by that interface must appear in your class before the class will successfully compile
+// All methods defined by that interface appear in your class before class will successfully compile
 // an interface is like a "can-do" or an "is-a" relationship
 public interface BoundedQueue<T> extends Iterable<T> {
 
